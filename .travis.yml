@@ -4,6 +4,8 @@ node_js:
 sudo: false
 cache: yarn
 after_success:
+  - git config --global user.name "akameco"
+  - git config --global user.email "akameco.t@gmail.com"
   - '[ "$TRAVIS_BRANCH" == "dev" ] && [ $GH_TOKEN ] && npm run deploy'
 env:
   global:
