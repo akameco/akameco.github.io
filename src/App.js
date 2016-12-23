@@ -11,10 +11,17 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<div className="App-header">
-					赤芽
+				<div className="header">
+					<div className="headerTop">
+						<div className="title">
+							赤芽
+						</div>
+						<div className="subTitle">
+							akameco
+						</div>
+					</div>
 				</div>
-				<div className="App-links">
+				<div className="links">
 					<MyLink href="https://github.com/akameco" label="GitHub"/>
 					<MyLink href="https://twitter.com/akameco" label="Twitter"/>
 					<MyLink href="http://qiita.com/akameco" label="qiita"/>
