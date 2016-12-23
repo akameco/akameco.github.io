@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '6'
+sudo: false
+cache: yarn
+after_success:
+  - '[ "$TRAVIS_BRANCH" == "dev" ] && [ $GH_TOKEN ] && npm run deploy'
+env:
+  global:
+    secure: n6uy45AeO3p3ocsMpMRtvHHam9VM5ubDOPgWB3/lNbFTH9oJY83+zcBwoEmB3+7zt2CPuQX4bzoAt6pY1+F+dVvq7r9KOvJW17vvp7hpUzASLYT43Kd5QqFe4eXfuLzjkLGuaD9MFet1Y4WFkoWVOYSycKRukTWUzxeUuW7ohk235LtdUX/Rerwy5S1l5K4zdQs82kNeCO4p4250qdiRwAyjGW+mCOCHyScsxELjLqIxaWcdmQ+Q0JkxaSFB2ARwDpQacviZL1k2RBHc0+OxPV/jMIg7zKLFMRe1z+5GNcA+trCXlh3VQqtwYwhRDGzcgQOFnNMBY2YwLSR1WbL4/DkF5c6eMeUezPaA7g39Z9SijeE0MnKIy6a8bpi3SgEYqZiswM9Y41b8e1cNDU6KTauLdpuCvEW4OPnMVoWkU0rq2cSnCk25hZUO3T9HXyC0uohbbaC/TP99MFdez0t7KxxgsQUCVQ3bCNcvTxqViGIxU8u9uGA5V55BNtokjNTPgKpyodA78Pyu7HYiC9e2XK+Jy8/f0VFw3BvDACryxhJR0HjyM4V0RWKYiwFAZp8FEeGjOrI55NSdCkeS9h9UxhA74WoOcX3ZJ4tHn8NsxBr7cwWuuHSvxl1XDWaVqWw/2SPwxMl4dyI1ALTN68ChLN8PSDHMmhiK7JpZt8qyKlw=
